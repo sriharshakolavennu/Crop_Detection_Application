@@ -1,4 +1,5 @@
-const API_BASE = 'http://localhost:5000'
+const API_BASE = import.meta.env.VITE_API_BASE ||
+  'https://crop-detection-application.onrender.com'
 
 async function request(path, opts = {}){
   const res = await fetch(`${API_BASE}/api${path}`, {...opts, headers: {'Content-Type': 'application/json', ...(opts.headers||{})}})
