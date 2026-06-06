@@ -1,0 +1,202 @@
+:root{
+  --primary: #1B5E20;
+  --secondary: #4CAF50;
+  --accent: #FFC107;
+  --bg: #F5F7F5;
+  --card: #FFFFFF;
+  --text: #123520;
+  --muted: #6b6b6b;
+  --radius: 12px;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);margin:0}
+
+/* Premium header */
+.premium-header{position:sticky;top:0;z-index:40;background:rgba(245,247,245,0.6);backdrop-filter:blur(6px);box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+.premium-header-inner{display:flex;align-items:center;gap:16px;padding:12px 16px}
+.brand-left{display:flex;align-items:center;gap:12px}
+.logo-gradient{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px}
+.title-large{font-weight:700;font-size:18px}
+.search-center{flex:1;display:flex;justify-content:center}
+.search-input{width:640px;max-width:calc(100% - 160px);background:rgba(255,255,255,0.9);padding:8px;border-radius:999px;display:flex;align-items:center;gap:8px;box-shadow:0 6px 24px rgba(27,94,32,0.06)}
+.search-input input{flex:1;border:0;outline:none;padding:10px 12px;border-radius:999px;background:transparent}
+.btn-voice-inside{background:transparent;border:0;padding:6px 10px;border-radius:8px;cursor:pointer}
+.header-actions{display:flex;align-items:center;gap:12px}
+.profile{display:flex;align-items:center;gap:8px}
+.profile img{width:44px;height:44px;border-radius:10px}
+
+/* Hero banner */
+.hero-banner{background:linear-gradient(90deg, rgba(27,94,32,0.08), rgba(76,175,80,0.04));padding:28px 0;margin-bottom:18px}
+.hero-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.hero-text h1{margin:0;font-size:24px}
+.hero-text p{margin:6px 0 12px;color:var(--muted)}
+.hero-cta button{margin-right:8px}
+.hero-illustration{width:220px;height:120px;display:flex;align-items:center;justify-content:center}
+.illu-placeholder{width:160px;height:96px;border-radius:12px;background:linear-gradient(135deg,#E8F5E9,#F1F8E9);display:flex;align-items:center;justify-content:center;font-size:40px}
+
+/* Glassmorphism stat cards and animations */
+.stat-card{background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));border-radius:14px;padding:18px;box-shadow:0 8px 30px rgba(2,48,18,0.06);backdrop-filter:blur(6px);transition:transform .18s ease,box-shadow .18s ease}
+.stat-card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(2,48,18,0.12)}
+.stat-icon{font-size:28px}
+.stat-value{font-size:22px}
+
+/* Quick action cards */
+.quick-action{background:linear-gradient(180deg, #fff, rgba(255,255,255,0.92));border-radius:12px;padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(0,0,0,0.04);transition:transform .12s}
+.quick-action:hover{transform:translateY(-6px)}
+
+/* AI assistant floating */
+.assistant-toggle{background:linear-gradient(135deg,var(--primary),var(--secondary));box-shadow:0 12px 30px rgba(27,94,32,0.18)}
+
+/* Product cards */
+.product-card{border-radius:12px;overflow:hidden;transition:transform .12s ease,box-shadow .12s}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 14px 36px rgba(0,0,0,0.08)}
+.product-body{padding:12px}
+
+/* Weather gradient */
+.weather-card{background:linear-gradient(135deg, rgba(27,94,32,0.06), rgba(76,175,80,0.02));color:var(--text)}
+
+/* Store cards */
+.store-list .store-item{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#F7FFF7);box-shadow:0 8px 20px rgba(0,0,0,0.04);margin-bottom:12px}
+
+/* Responsive tweaks */
+@media (max-width:900px){
+  .search-input{max-width:480px}
+  .hero-inner{flex-direction:column;align-items:flex-start}
+}
+
+/* Dashboard layout grid */
+.content-columns{display:grid;grid-template-columns:65% 35%;gap:20px;align-items:start}
+.left-col, .right-col{display:flex;flex-direction:column;gap:16px}
+.left-col .disease-card .card{width:100%}
+.detection-result img{max-width:100%;height:auto}
+
+@media (max-width:900px){
+  .content-columns{grid-template-columns:1fr}
+}
+
+
+.container{max-width:1200px;margin:24px auto;padding:0 16px}
+
+.header{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:transparent}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{font-size:28px}
+.title{font-weight:700;font-size:20px}
+.search{display:flex;align-items:center;background:var(--card);padding:8px;border-radius:999px;box-shadow:0 6px 18px rgba(27,94,32,0.06);gap:8px}
+.search input{border:0;outline:none;background:transparent;padding:8px 12px;width:420px}
+.btn-voice,.btn-voice-sm{background:transparent;border:0;padding:8px;border-radius:8px;cursor:pointer}
+.header-right{display:flex;align-items:center;gap:12px}
+.icon-btn{background:transparent;border:0;padding:8px;border-radius:8px;cursor:pointer}
+.profile{display:flex;align-items:center;gap:8px}
+.profile img{width:40px;height:40px;border-radius:50%}
+
+.app-main{padding-bottom:80px}
+
+.card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 8px 24px rgba(0,0,0,0.06);margin-bottom:16px}
+
+.dashboard-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:16px}
+.stat-card{display:flex;justify-content:space-between;align-items:center;padding:16px;border-radius:12px;transition:transform .18s ease,box-shadow .18s ease}
+.stat-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,0.08)}
+.stat-left{display:flex;gap:12px;align-items:center}
+.stat-icon{font-size:34px}
+.stat-value{font-size:20px;font-weight:700}
+.stat-label{font-size:13px;color:var(--muted)}
+
+.quick-actions{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:20px}
+.quick-action{display:flex;flex-direction:column;align-items:center;padding:18px;border-radius:14px;border:0;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.04);transition:transform .12s}
+.quick-action:hover{transform:translateY(-6px)}
+.action-emoji{font-size:22px}
+.action-label{margin-top:8px;font-size:14px}
+
+.content-columns{display:grid;grid-template-columns:65% 35%;gap:20px;align-items:start}
+.left-col, .right-col{display:flex;flex-direction:column;gap:16px}
+
+.disease-top{display:flex;gap:16px}
+.disease-top img{max-width:100%;height:auto;border-radius:10px;object-fit:cover}
+.disease-meta h3{margin:0}
+.confidence{color:var(--muted)}
+.severity{font-weight:600}
+.disease-details h4{margin:12px 0 6px}
+.disease-actions{display:flex;gap:12px;margin-top:12px}
+.btn-primary{background:var(--primary);color:#fff;border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
+.btn-secondary{background:#f0f0f0;border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
+.btn-listen{background:var(--accent);border:0;padding:8px 12px;border-radius:8px;cursor:pointer;color:#000}
+
+/* Loader */
+.loader{border:4px solid #f3f3f3;border-top:4px solid var(--primary);border-radius:50%;width:36px;height:36px;animation:spin 1s linear infinite}
+.loader.small{width:20px;height:20px;border-width:3px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Detection progress bar */
+.confidence-bar{margin-top:12px}
+.bar-bg{background:#f0f0f0;border-radius:8px;height:12px;overflow:hidden}
+.bar-fill{height:100%;background:linear-gradient(90deg,var(--secondary),var(--accent));transition:width .6s ease}
+.conf-label{font-size:13px;color:var(--muted);margin-top:6px}
+
+/* Severity colors */
+.severity{display:inline-block;padding:6px 10px;border-radius:999px;color:#fff;margin-top:8px}
+.severity.green{background:#2e7d32}
+.severity.orange{background:#ef6c00}
+.severity.red{background:#c62828}
+
+/* Animations */
+.card{transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-4px)}
+
+/* Product marketplace tweaks */
+.product-card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.product-meta{color:var(--muted);margin-top:6px}
+
+
+.assistant{position:fixed;right:20px;bottom:20px}
+.assistant-toggle{background:var(--primary);color:#fff;padding:12px 16px;border-radius:999px;border:0;cursor:pointer}
+.assistant-panel{width:320px;margin-top:12px;background:var(--card);padding:12px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.12)}
+.assistant-header{font-weight:700;margin-bottom:8px}
+.assistant-body input{width:100%;padding:8px;border-radius:8px;border:1px solid #eee}
+.assistant-actions{display:flex;gap:8px;margin-top:8px}
+
+.assistant-messages{max-height:220px;overflow:auto;margin-bottom:8px}
+.assistant-messages .msg{padding:8px;border-radius:8px;margin-bottom:6px}
+.assistant-messages .msg.user{background:#e8f5e9;text-align:right}
+.assistant-messages .msg.bot{background:#fff8e1}
+
+.weather-card .weather-top{display:flex;gap:12px;align-items:center}
+.weather-icon{font-size:28px}
+.temp{font-weight:700;font-size:20px}
+
+/* Expert chat styles */
+.expert-chat .chat-header{display:flex;justify-content:space-between;align-items:center}
+.expert-top select{padding:8px;border-radius:8px}
+.expert-card img{border-radius:8px}
+.messages{display:flex;flex-direction:column;gap:6px}
+.chat-input input{flex:1;padding:10px;border-radius:8px;border:1px solid #eee}
+
+
+
+.footer{display:flex;justify-content:space-between;align-items:center;padding:12px 24px;background:transparent;color:var(--muted);font-size:14px}
+.footer-links a{margin-left:12px;color:var(--muted);text-decoration:none}
+
+/* Responsive */
+@media (max-width: 900px){
+  .dashboard-grid{grid-template-columns:repeat(2,1fr)}
+  .quick-actions{grid-template-columns:repeat(3,1fr)}
+  .search input{width:200px}
+  .disease-top img{width:180px}
+}
+
+@media (max-width: 520px){
+  .dashboard-grid{grid-template-columns:1fr}
+  .quick-actions{grid-template-columns:repeat(2,1fr)}
+  .content-columns{flex-direction:column}
+  .search input{width:120px}
+}
+
+/* Auth pages */
+.auth-page{display:flex;align-items:center;justify-content:center;min-height:70vh}
+.auth-card{width:100%;max-width:420px;padding:24px}
+.auth-card label{display:block;margin-top:12px;font-size:14px}
+.auth-card input{width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #eee}
+.auth-buttons{display:flex;gap:8px;margin-top:16px}
+.auth-actions{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.error{color:#c62828;margin-top:8px}
