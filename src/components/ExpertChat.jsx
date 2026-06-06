@@ -3,7 +3,8 @@ import io from 'socket.io-client'
 import api from '../api'
 import { useLanguage } from '../context/LanguageContext'
 
-const SOCKET_URL = 'http://localhost:5000'
+const SOCKET_URL =  import.meta.env.VITE_API_BASE ||
+  'https://crop-detection-application.onrender.com'
 
 export default function ExpertChat(){
   const [experts,setExperts] = useState([])
@@ -27,9 +28,9 @@ export default function ExpertChat(){
   const { t } = useLanguage()
 
   useEffect(()=>{
-    const socket = io(SOCKET_URL || window.location.origin)
+    const socket = io(SOCKET_URL, {transports: ['websocket', 'polling']})
     socketRef.current = socket
-    socket.on('connect', ()=>{})
+    socket.on('connect', ()=>{ console.log('Socket connected')})
     socket.on('expertMessage', (payload)=>{
       setMessages(m=>[...m,payload])
     })
@@ -127,4 +128,4 @@ export default function ExpertChat(){
       </div>
     </section>
   )
-}
+}  
