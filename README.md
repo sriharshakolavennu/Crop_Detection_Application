@@ -32,3 +32,5 @@ Files of interest:
 - `src/components` — UI components
 - `src/pages` — Login/Signup
 - `src/styles/global.css` — Theme and responsive styles
+## Public URL
+Link:https://crop-detection-application-frontend.onrender.com
